@@ -60,6 +60,12 @@
 
         var template = Handlebars.compile($("#card-template").html());
         $("#board").html(template(game));
+
+        $('div[id^=card-]').toggle(function(e) {
+            $(this).addClass('flip');
+        }, function() {
+            $(this).removeClass('flip');
+        });
     })
 </script>
 
