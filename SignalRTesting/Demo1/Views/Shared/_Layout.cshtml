@@ -6,11 +6,17 @@
     <title>@ViewBag.Title</title>
     @Styles.Render("~/Content/css")
     @Scripts.Render("~/bundles/modernizr")
+
+    <link rel="stylesheet" href="~/Content/bootstrap.css" media="screen"/>
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/jqueryui")
+
+    @RenderSection("head", required:false)
 </head>
 <body>
     @RenderBody()
 
-    @Scripts.Render("~/bundles/jquery")
+    
     @RenderSection("scripts", required: false)
 </body>
 </html>
